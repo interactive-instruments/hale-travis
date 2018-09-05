@@ -1,0 +1,30 @@
+language:
+- java
+
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+
+# disable the default submodule logic
+git:
+  submodules: false
+
+# get current remote HEAD of submodules
+# adjust hale to use local platform
+before_install:
+  - git submodule update --init --recursive --remote
+  - sed -i "s#https://gitlab.wetransform.to/hale/hale-build-support/raw/.*/updatesites/platform#file:$TRAVIS_BUILD_DIR/hale-platform/build/updatesite#" hale/platform/hale-platform.target
+  - sed -i "s#<unit id=\"eu.esdihumboldt.hale.platform.feature.group\" version=\".*\"/>#<unit id=\"eu.esdihumboldt.hale.platform.feature.group\" version=\"0.0.0\"/>#" hale/platform/hale-platform.target
+  - git diff hale/platform/hale-platform.target
+
+# build updatesite  
+install:
+- "cd hale-platform && ./gradlew updateSite"
+
+# build hale
+script:
+- "cd hale && ./build.sh product --arch x86_64 --os linux HALE"

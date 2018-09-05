@@ -1,0 +1,8 @@
+[submodule "hale-platform"]
+	path = hale-platform
+	url = https://github.com/interactive-instruments/hale-platform.git
+	branch = master
+[submodule "hale"]
+	path = hale
+	url = https://github.com/interactive-instruments/hale.git
+	branch = feature/xtraserver
