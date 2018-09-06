@@ -1,6 +1,7 @@
 pipeline:
   build:
     image: openjdk:8-alpine
+    dns_search: interactive-instruments.de
     commands:
       - git submodule update --init --recursive --remote
       - sed -i "s#https://gitlab.wetransform.to/hale/hale-build-support/raw/.*/updatesites/platform#file:$TRAVIS_BUILD_DIR/hale-platform/build/updatesite#" hale/platform/hale-platform.target
