@@ -26,7 +26,7 @@ before_install:
 
 # build updatesite  
 install:
-- "cd hale-platform && timeout 40m bash travis_wait_new 40 ./gradlew --info updateSite || echo 'timed out'"
+- "cd hale-platform && timeout 40m bash ../travis_wait_new 40 ./gradlew --info updateSite || echo 'timed out'"
 
 # build hale
 script:
