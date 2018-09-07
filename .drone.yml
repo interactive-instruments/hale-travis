@@ -30,7 +30,7 @@ pipeline:
       - sed -i "s#https://gitlab.wetransform.to/hale/hale-build-support/raw/.*/updatesites/platform#file:$TRAVIS_BUILD_DIR/hale-platform/build/updatesite#" hale/platform/hale-platform.target
       - sed -i "s#<unit id=\"eu.esdihumboldt.hale.platform.feature.group\" version=\".*\"/>#<unit id=\"eu.esdihumboldt.hale.platform.feature.group\" version=\"0.0.0\"/>#" hale/platform/hale-platform.target
       - sed -i "s#repositories {#repositories {\\nmaven { url 'https://repo.boundlessgeo.com/main/'}#" hale-platform/build.gradle
-      - cd hale-platform && ./gradlew --info updateSite
+      - cd hale-platform && ./gradlew --info --stacktrace updateSite
       - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
       - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 #      - cd hale && ./build.sh product --arch x86_64 --os linux HALE
