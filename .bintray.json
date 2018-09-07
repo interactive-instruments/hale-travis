@@ -8,12 +8,12 @@
     },
 
     "version": {
-        "name": "dev"
+        "name": "ii-snapshot"
     },
 
     "files": [
         {
-            "includePattern": "hale/build/target/(.*\\.tar\\.gz)",
+            "includePattern": "build/target/(.*\\.tar\\.gz)",
             "uploadPattern": "$1"
         }
     ],
