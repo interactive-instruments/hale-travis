@@ -34,10 +34,13 @@ install:
 
 # build hale
 script:
-- cd ../hale && ./build.sh product --arch x86_64 --os linux HALE
+- cd ../hale 
+- ./build.sh product --arch x86_64 --os linux HALE
+- ./build.sh product --arch x86_64 --os windows HALE
 
 after_success:
-- curl -v -T build/target/hale-studio-3.4.0.SNAPSHOT-linux.gtk.x86_64.tar.gz -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
+- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-linux.gtk.x86_64.tar.gz -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
+- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-win32.win32.x86_64.zip -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
 
 
 #deploy:
