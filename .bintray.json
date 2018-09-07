@@ -14,7 +14,10 @@
     "files": [
         {
             "includePattern": "build/target/(.*\\.tar\\.gz)",
-            "uploadPattern": "$1"
+            "uploadPattern": "$1",
+            "matrixParams": {
+                "override": 1
+            }
         }
     ],
     "publish": true
