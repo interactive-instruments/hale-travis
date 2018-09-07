@@ -36,9 +36,13 @@ install:
 script:
 - cd ../hale && ./build.sh product --arch x86_64 --os linux HALE
 
-deploy:
-  provider: bintray
-  file: "$TRAVIS_BUILD_DIR/.bintray.json"
-  user: "$BINTRAY_USER"
-  key: "$BINTRAY_KEY"
-  skip_cleanup: true
+after_success:
+- curl -v -T build/target/hale-studio-3.4.0.SNAPSHOT-linux.gtk.x86_64.tar.gz -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
+
+
+#deploy:
+#  provider: bintray
+#  file: "$TRAVIS_BUILD_DIR/.bintray.json"
+#  user: "$BINTRAY_USER"
+#  key: "$BINTRAY_KEY"
+#  skip_cleanup: true
