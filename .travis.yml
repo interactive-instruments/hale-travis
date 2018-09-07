@@ -38,7 +38,7 @@ script:
 
 deploy:
   provider: bintray
-  file: ".bintray.json"
+  file: "$TRAVIS_BUILD_DIR/.bintray.json"
   user: "$BINTRAY_USER"
   key: "$BINTRAY_KEY"
   skip_cleanup: true
