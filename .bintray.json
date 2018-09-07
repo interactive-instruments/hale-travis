@@ -1,0 +1,20 @@
+{
+    "package": {
+        "name": "hale-studio",
+        "repo": "hale-dev",
+        "subject": "iide",
+        "vcs_url": "https://github.com/interactive-instruments/hale.git",
+        "licenses": ["LGPL-3.0"]
+    },
+
+    "version": {
+    },
+
+    "files": [
+        {
+            "includePattern": "hale/build/target/(.*\\.tar\\.gz)",
+            "uploadPattern": "$1"
+        }
+    ],
+    "publish": true
+}
