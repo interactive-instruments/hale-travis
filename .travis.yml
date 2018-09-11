@@ -1,6 +1,9 @@
 language:
 - java
 
+python:
+  - "3.5"
+
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -53,3 +56,11 @@ deploy:
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   local_dir: "$TRAVIS_BUILD_DIR/hale/build/target"
   skip_cleanup: true
+
+after_deploy:
+  - pip install awscli
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+  - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+  - aws configure set default.region eu-central-1
+  - aws s3 presign s3://ii.hale.dev/hale-studio-3.5.0.SNAPSHOT-linux.gtk.x86_64.tar.gz --expires-in 604800
+  
