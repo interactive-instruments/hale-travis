@@ -58,9 +58,8 @@ deploy:
   skip_cleanup: true
 
 after_deploy:
-  - pip install awscli
+  - pip install --user awscli
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
   - aws configure set default.region eu-central-1
   - aws s3 presign s3://ii.hale.dev/hale-studio-3.5.0.SNAPSHOT-linux.gtk.x86_64.tar.gz --expires-in 604800
-  
