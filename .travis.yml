@@ -16,8 +16,10 @@ git:
 env:
   global: 
   - TERM=dumb
-  - secure: ak9e6zXseOVS5V+NdPIcyWJMCZfrUg50cAKsCCrPFVBTXXnSk7DSPCAjfiW9oEu9buSHpeHUu9MItu4NfN9i1SA17xvq0pNO/VC9e4WpsjA3rHGLXfPtjEcX9ieLhQjEVtdjlSlY4ZeGkWcbKQW0bwRASojAe0RnyTv1BykVNfmWRDZMysp8JEPePt08Pw2XTtFVBH703dbL9fNNoRGDEbs5tBZ8e9yP6wksXeU0Ha881Xy3sRdvGViRVxK41my1P8WTFmYv2GgdaNgQ8tBF5snsU/4D58JNs/5UsI2bAbUcfFnJC2ry/X5vbb4M/NpqYcWCP8GTHd20PCLM+dpX+9CEB2svRnnXRjHPR7UOO88aPedipPkVD3e56yCyv04IykTLB9LUxPc9PFBRkKfY3OK/Lhp/SFx2jaLZJpplXsxqB9Q0hWsiXaroaUj0yb0pd3m7sjVPR7NisWmyRIA72Zua4EEJHBR66N4po2y2WCVgT3FhkXoGZGaCczlzA8h6nvBlNbHO+na3kQ1lV1ADNjXcf8dWwgkzhkzfYQzBVMO6M5R46NgpRRe/yT6KZF3Y77DLUYrKOZC7uA1ywulT75v4mNRkGxJAbmOWJ98qikMyln8TVBq7Ujq7iSAadwJRMggT24Y/dX3V9swuloqPy31pTPRNYeh8IPvsrDUUhbc=
-  - secure: mbhSFZkeBoKQ0mzGad/euk95uUwIiM4L4AN8LBZVUYT2Wgmy251CqdV/0LBiMlafMGDBc3lAj1HHFhrx+9aO5rD53xYhflX47qjgIFS8u/C3m8C+BiX57IChtNFMBbpz+UknYK261mHU4u2yuOcrVDsqdwMn2VxLWaZSdmWU6ddLYXKGwglaSWeHzhiE7fufG6xiZfT+UpRiHAf4TsjFskAczv0HgoUe8nUaIMFseqpqchEzthzdbcnL78CyHmmnuikq8KhHIBad9kC0MGuIv71UFmbin5OvywsYHU9xGvmssSzPCNl0BEFEKZ8Wn/Mhk8lg6hAVeCQy1sV9f3MmDaOkrNGENQXQfOE3Kt5/YNHqmoGG7YruAOHWgMlo/uiNGnFcwnON/0G7SHCDQXXJj8O8gXys/FzfXIx8tG7IFHrJy3mQc10CX1AIoPiI7ubCNK1UKScirC5NsTuML8e1z3YYP+6j12CxluAeWfZmXJW/nH1tq+n0cAxK7s2xC1wxL1avT1xFKSsX7r4a+MeojuYrXa/o1wvqVgOq5nvZ7fay7ha6DaE2t3k5KyNWB6PC7ow0OLQZm4r32cgSXW+t1yOkFk2e5r0qJgWzIxULnYK4nYOFz4cs2YuJbpoZFLE9iSd5LSQdG/UrmxEKMZMHVH8mAyKMYQ6OStAIll7SpFk=
+#  - secure: ak9e6zXseOVS5V+NdPIcyWJMCZfrUg50cAKsCCrPFVBTXXnSk7DSPCAjfiW9oEu9buSHpeHUu9MItu4NfN9i1SA17xvq0pNO/VC9e4WpsjA3rHGLXfPtjEcX9ieLhQjEVtdjlSlY4ZeGkWcbKQW0bwRASojAe0RnyTv1BykVNfmWRDZMysp8JEPePt08Pw2XTtFVBH703dbL9fNNoRGDEbs5tBZ8e9yP6wksXeU0Ha881Xy3sRdvGViRVxK41my1P8WTFmYv2GgdaNgQ8tBF5snsU/4D58JNs/5UsI2bAbUcfFnJC2ry/X5vbb4M/NpqYcWCP8GTHd20PCLM+dpX+9CEB2svRnnXRjHPR7UOO88aPedipPkVD3e56yCyv04IykTLB9LUxPc9PFBRkKfY3OK/Lhp/SFx2jaLZJpplXsxqB9Q0hWsiXaroaUj0yb0pd3m7sjVPR7NisWmyRIA72Zua4EEJHBR66N4po2y2WCVgT3FhkXoGZGaCczlzA8h6nvBlNbHO+na3kQ1lV1ADNjXcf8dWwgkzhkzfYQzBVMO6M5R46NgpRRe/yT6KZF3Y77DLUYrKOZC7uA1ywulT75v4mNRkGxJAbmOWJ98qikMyln8TVBq7Ujq7iSAadwJRMggT24Y/dX3V9swuloqPy31pTPRNYeh8IPvsrDUUhbc=
+#  - secure: mbhSFZkeBoKQ0mzGad/euk95uUwIiM4L4AN8LBZVUYT2Wgmy251CqdV/0LBiMlafMGDBc3lAj1HHFhrx+9aO5rD53xYhflX47qjgIFS8u/C3m8C+BiX57IChtNFMBbpz+UknYK261mHU4u2yuOcrVDsqdwMn2VxLWaZSdmWU6ddLYXKGwglaSWeHzhiE7fufG6xiZfT+UpRiHAf4TsjFskAczv0HgoUe8nUaIMFseqpqchEzthzdbcnL78CyHmmnuikq8KhHIBad9kC0MGuIv71UFmbin5OvywsYHU9xGvmssSzPCNl0BEFEKZ8Wn/Mhk8lg6hAVeCQy1sV9f3MmDaOkrNGENQXQfOE3Kt5/YNHqmoGG7YruAOHWgMlo/uiNGnFcwnON/0G7SHCDQXXJj8O8gXys/FzfXIx8tG7IFHrJy3mQc10CX1AIoPiI7ubCNK1UKScirC5NsTuML8e1z3YYP+6j12CxluAeWfZmXJW/nH1tq+n0cAxK7s2xC1wxL1avT1xFKSsX7r4a+MeojuYrXa/o1wvqVgOq5nvZ7fay7ha6DaE2t3k5KyNWB6PC7ow0OLQZm4r32cgSXW+t1yOkFk2e5r0qJgWzIxULnYK4nYOFz4cs2YuJbpoZFLE9iSd5LSQdG/UrmxEKMZMHVH8mAyKMYQ6OStAIll7SpFk=
+  - secure: "bAinRwtqzMmDw+5G4gaOQvkEk25umu7iQBLrbg4dd9gFbrWDUo8FTQJBopBqUfrQXqGoPYFzzHCQ16/ZBQBi9ZPknn19TslnpA7W8pbm3pIktpd40wXVujPhbtxRRt6un0iJxaIQ0qWKddGIuYtIkPr10+KLZGZFcRXRD94LFbBuqNCsT3Mar26hz27Ntb8NZxwT5beZLAoHFOOxk6qoifMDyJPyTw6o9vIDhvnOFXKV4qwRqYa5Ln1edSXGTpGNSupDs2n9tS0KRFZirkbaxmFNx2/dHh5X46iRFTI+wSKNA2ZM6CKSe0I+opHti9s0LqNqg2/xxL+OFfjzYWg08gfmf/jnnvyN+GyKvTPxB2T4fi+/WUJsgCCaa4QweBW2h1ZxJ7TJn0S7q1WSSWyEbwbI+HL73Vq8ddRZmY+34e8Thxls8jNd4VRGB04eoiSkMmJZHMF6kGsCIvypjFygujyxcAQrhPWYrOUbISUYMYOEqWDXc/JDyoOTm81kFFsAhNdAh/idD6pfL2nehYzXoi7+4Bs9ntCZrXdjHtDrCKGJaGy7fXl7xrv+VRp4SuMQrz5tG3iRM8rBRRNV1ytvI5113qcO13id8s5+q9hNiUU9p4rLoP5Qb1lr1koXZQwy5yd/L61BZnvbBm1Kg3bxvZWJkC5zmvPW+/FfL56Hx+o="
+  - secure: "Ez3TZIXSgWuUgVhcDgjT8tn72MU20utypBQMT38zcWy4ncqOtK46m5eXNSpDsmsEYYcnQpYm8bh7H16QJ/iYmKPQpf6hrNIJXo4SwHG1p3Johr/HQrzBdzf44AgEBNAJ7O5UlMb6jXYl/JsLPs6QycnZhNsCqd7BRbgvrmL7y/sCBXVbGVd/Ze5e7oGcWa5akaPxtwT+OhYlCRfViYW+OKIOtOw2Vu1XUPv7pTAkk38A7AAmjfjZEZJ03pJtWUm2TyjOUFg0FOtIowe0OCfxWXpJcTQ+F2M+r1w+TGc3aNpdIlIIwrgjyYVBNWcycArqyW4lqRBZx1dMY0u+Fuw4VEOGJQbvb4pEPrnQzM2AGzJtA/fLEzofoldJ9sGbVdkEotBDOenpHk/Fqkad6zjLHNMHAnKpi97mKW3Eqzciw+qovpXCo7KH9xXeEBj0wy38IhFtMIrFTPE/wWCa6V9C2sKgygwnPO5fkuMH6oaeToqWuGiqMhVrdhtUDn3YL2kOQ/bv4DXOuGpaQK9TSEP6FRAIC6AzT+Vv4+7lBLxoZ9ONiYzoTvSQsb60Mp/XpjfeEqsAkh4K7EaVxENBzAfDkxLP3UBaA0fzkrREylBi4Gte6/pd4552Y4N3iOpYZO86LVYaSAw9p9sqyvqyoM91Syaka1rAjxDdF5n/M0qTU80="
 
 # get current remote HEAD of submodules
 # adjust hale to use local platform
@@ -38,14 +40,16 @@ script:
 - ./build.sh product --arch x86_64 --os linux HALE
 - ./build.sh product --arch x86_64 --os windows HALE
 
-after_success:
-- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-linux.gtk.x86_64.tar.gz -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
-- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-win32.win32.x86_64.zip -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
+#after_success:
+#- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-linux.gtk.x86_64.tar.gz -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
+#- curl -v -T build/target/hale-studio-3.5.0.SNAPSHOT-win32.win32.x86_64.zip -u $BINTRAY_USER:$BINTRAY_KEY https://api.bintray.com/content/iide/hale-dev/hale-studio/ii-snapshot/;override=1
 
 
-#deploy:
-#  provider: bintray
-#  file: "$TRAVIS_BUILD_DIR/.bintray.json"
-#  user: "$BINTRAY_USER"
-#  key: "$BINTRAY_KEY"
-#  skip_cleanup: true
+deploy:
+  provider: s3
+  region: eu-central-1
+  bucket: "ii.hale.dev"
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  local_dir: "$TRAVIS_BUILD_DIR/hale/build/target"
+  skip_cleanup: true
