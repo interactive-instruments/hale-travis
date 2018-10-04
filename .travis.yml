@@ -41,7 +41,7 @@ install:
 # build hale
 script:
 - cd ../hale 
-- echo "export HALEVERSION=$(grep -oPm1 '(?<=<version>)[^<]+' pom.xml)" > env.sh
+- echo "export HALEVERSION=$(grep -oPm1 '(?<=<version>)[^<]+' ./pom.xml)" > env.sh
 - echo "export HALETAG=ii.$(date +'%Y%m%d%H%M%S')" >> env.sh
 - source env.sh
 - ./build.sh product --arch x86_64 --os linux --tag $HALETAG HALE
@@ -62,6 +62,7 @@ deploy:
   skip_cleanup: true
 
 after_deploy:
+  - export
   - pip install --user awscli
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
