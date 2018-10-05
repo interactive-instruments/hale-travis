@@ -38,7 +38,7 @@ install:
 
 # build hale
 script:
-- echo "export HALEVERSION=$(grep -oPm1 '(?<=<version>)[^<]+' $TRAVIS_BUILD_DIR/hale/pom.xml)" > env.sh
+- echo "export HALEVERSION=$(grep -oPm1 '(?<=version = .)[\w.-]+' TRAVIS_BUILD_DIR/hale/build/config.groovy)" > env.sh
 - echo "export HALETAG=ii.$(date +'%Y%m%d%H%M%S')" >> env.sh
 - source env.sh
 - cd ../hale 
@@ -55,7 +55,6 @@ deploy:
   skip_cleanup: true
 
 after_deploy:
-  - export
   - pip install --user awscli
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
