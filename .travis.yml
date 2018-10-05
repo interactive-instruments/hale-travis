@@ -38,7 +38,7 @@ install:
 
 # build hale
 script:
-- echo "export HALEVERSION=$(grep -oPm1 '(?<=version = .)[\w.-]+' TRAVIS_BUILD_DIR/hale/build/config.groovy)" > env.sh
+- echo "export HALEVERSION=$(grep -oPm1 '(?<=version = .)[\w.-]+' $TRAVIS_BUILD_DIR/hale/build/config.groovy)" > env.sh
 - echo "export HALETAG=ii.$(date +'%Y%m%d%H%M%S')" >> env.sh
 - source env.sh
 - cd ../hale 
