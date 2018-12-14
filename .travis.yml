@@ -45,7 +45,7 @@ script:
 #- cd ../hale 
 #- ./build.sh product --arch x86_64 --os linux --tag $HALETAG HALE
 #- ./build.sh product --arch x86_64 --os windows --tag $HALETAG HALE
-
+#
 #deploy:
 #  provider: s3
 #  region: eu-central-1
@@ -54,8 +54,8 @@ script:
 #  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
 #  local_dir: "$TRAVIS_BUILD_DIR/hale/build/target"
 #  skip_cleanup: true
-
-after_deploy:
+#
+#after_deploy:
   - pip install --user awscli
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
