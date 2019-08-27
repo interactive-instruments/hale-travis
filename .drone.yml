@@ -12,8 +12,8 @@ pipeline:
     image: drillster/drone-volume-cache
     restore: true
     mount:
-      - "$HOME/.gradle/caches/"
-      - "$HOME/.gradle/wrapper/"
+      - .gradle/caches
+      - .gradle/wrapper
     volumes:
       - /tmp/cache:/cache
 
@@ -23,7 +23,7 @@ pipeline:
 #    extra_hosts:
 #      - "project-management:192.168.230.8"
     environment:
-      - GRADLE_USER_HOME=
+      - GRADLE_USER_HOME=$DRONE_WORKSPACE
     commands:
       - export  
       - apk add --no-cache bash
@@ -40,7 +40,7 @@ pipeline:
     image: drillster/drone-volume-cache
     rebuild: true
     mount:
-      - "$HOME/.gradle/caches/"
-      - "$HOME/.gradle/wrapper/"
+      - .gradle/caches
+      - .gradle/wrapper
     volumes:
       - /tmp/cache:/cache
