@@ -3,9 +3,9 @@ clone:
     image: plugins/git
     recursive: true
     submodule_update_remote: true
-    dns_search: interactive-instruments.de
-    extra_hosts:
-      - "project-management:192.168.230.8"
+#    dns_search: interactive-instruments.de
+#    extra_hosts:
+#      - "project-management:192.168.230.8"
 
 pipeline:
   restore-cache:
@@ -19,9 +19,9 @@ pipeline:
 
   build:
     image: openjdk:8-alpine
-    dns_search: interactive-instruments.de
-    extra_hosts:
-      - "project-management:192.168.230.8"
+#    dns_search: interactive-instruments.de
+#    extra_hosts:
+#      - "project-management:192.168.230.8"
     environment:
       - GRADLE_USER_HOME=
     commands:
@@ -32,8 +32,8 @@ pipeline:
       - sed -i "s#repositories {#repositories {\\nmaven { url 'https://repo.boundlessgeo.com/main/'}#" hale-platform/build.gradle
       - echo "platform{eclipseMirror='http://dl.bintray.com/simon-scholz/eclipse-apps/eclipse-p2-minimal.tar.gz'}" >> hale-platform/build.gradle
       - cd hale-platform && ./gradlew --info --stacktrace updateSite
-      - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-      - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+#      - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+#      - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 #      - cd hale && ./build.sh product --arch x86_64 --os linux HALE
 
   rebuild-cache:
