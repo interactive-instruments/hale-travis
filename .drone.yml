@@ -23,7 +23,7 @@ pipeline:
 #    extra_hosts:
 #      - "project-management:192.168.230.8"
     environment:
-      - GRADLE_USER_HOME=$DRONE_WORKSPACE
+      - GRADLE_USER_HOME="${DRONE_WORKSPACE}"
     commands:
       - export  
       - apk add --no-cache bash
