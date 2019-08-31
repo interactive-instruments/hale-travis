@@ -15,12 +15,14 @@ clone:
 steps:
   - name: restore-cache
     image: drillster/drone-volume-cache
-    restore: true
-    mount:
-      - .gradle/caches
-      - .gradle/wrapper
     volumes:
-      - /tmp/cache:/cache
+      - name: cache
+        path: /cache
+    settings:
+      restore: true
+      mount:
+        - .gradle/caches
+        - .gradle/wrapper
 
   - name: build
     image: openjdk:8-alpine
@@ -54,9 +56,17 @@ steps:
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache
-    rebuild: true
-    mount:
-      - .gradle/caches
-      - .gradle/wrapper
     volumes:
-      - /tmp/cache:/cache
+      - name: cache
+        path: /cache
+    settings:
+      rebuild: true
+      mount:
+        - .gradle/caches
+        - .gradle/wrapper
+
+
+volumes:
+  - name: cache
+    host: 
+      path: /tmp/cache
