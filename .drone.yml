@@ -55,6 +55,8 @@ steps:
       source: env.sh
       target: bla
       debug: true
+      type: file #apt|yum|file
+      expires: 1
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache
