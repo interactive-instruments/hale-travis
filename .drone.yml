@@ -38,7 +38,7 @@ pipeline:
 
   publish:
     image: cicd100:5000/iide/drone-download-link:latest
-    pull: always
+    pull: true
     settings:
       host: cicd100
       username: 
