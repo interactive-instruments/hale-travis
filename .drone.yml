@@ -35,7 +35,7 @@ steps:
 #      - echo "platform{eclipseMirror='http://dl.bintray.com/simon-scholz/eclipse-apps/eclipse-p2-minimal.tar.gz'}" >> hale-platform/build.gradle
 #      - cd hale-platform && ./gradlew --info --stacktrace updateSite
 #      - cd ..
-      - echo "export HALEVERSION=$(grep -oPm1 '(?<=version = .)[\w\.]+' $DRONE_WORKSPACE/hale/build/config.groovy).SNAPSHOT" > env.sh
+#      - echo "export HALEVERSION=$(grep -oPm1 '(?<=version = .)[\w\.]+' $DRONE_WORKSPACE/hale/build/config.groovy).SNAPSHOT" > env.sh
 #      - echo "export HALETAG=ii.20181214111318" >> env.sh
       - echo "export HALETAG=ii.$(date +'%Y%m%d%H%M%S')" >> env.sh
       - source env.sh
@@ -53,6 +53,7 @@ steps:
       password:
         from_secret: ssh_password
       source: env.sh
+      target: bla
       debug: true
 
   - name: rebuild-cache
