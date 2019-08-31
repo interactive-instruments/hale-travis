@@ -53,6 +53,7 @@ steps:
       password:
         from_secret: ssh_password
       source: env.sh
+      debug: true
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache
