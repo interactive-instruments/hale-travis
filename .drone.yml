@@ -37,8 +37,7 @@ steps:
       - source env.sh
       - cd hale 
       - ./build.sh product --arch x86_64 --os linux --tag $HALETAG HALE
-#      - ./build.sh product --arch x86_64 --os windows --tag $HALETAG HALE
-      - ls -l build/target/
+      - ./build.sh product --arch x86_64 --os windows --tag $HALETAG HALE
 
   - name: publish
     image: cicd100:5000/iide/drone-download-link:latest
@@ -49,9 +48,9 @@ steps:
         from_secret: ssh_user
       password:
         from_secret: ssh_password
-      source: env.sh
+      source: build/target/*
       target: hale
-      debug: true
+#      debug: true
       type: file #apt|yum|file
       #expires: 1
 
