@@ -48,7 +48,7 @@ steps:
         from_secret: ssh_user
       password:
         from_secret: ssh_password
-      source: build/target/*
+      source: hale/build/target/*
       target: hale
 #      debug: true
       type: file #apt|yum|file
