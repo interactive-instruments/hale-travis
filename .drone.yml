@@ -38,6 +38,7 @@ steps:
       - cd hale 
       - ./build.sh product --arch x86_64 --os linux --tag $HALETAG HALE
 #      - ./build.sh product --arch x86_64 --os windows --tag $HALETAG HALE
+      - ls -l target/
 
   - name: publish
     image: cicd100:5000/iide/drone-download-link:latest
