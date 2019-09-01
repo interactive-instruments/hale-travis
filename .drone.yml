@@ -3,16 +3,12 @@ kind: pipeline
 type: docker
 name: default
 
-clone:
-  git:
-    image: plugins/git
-    recursive: true
-    submodule_update_remote: true
-#    dns_search: interactive-instruments.de
-#    extra_hosts:
-#      - "project-management:192.168.230.8"
-
 steps:
+  - name: submodules
+    image: alpine:git
+    commands:
+    - git submodule update --recursive --remote
+
   - name: restore-cache
     image: drillster/drone-volume-cache
     volumes:
@@ -53,10 +49,10 @@ steps:
       password:
         from_secret: ssh_password
       source: env.sh
-      target: bla
+      target: hale
       debug: true
       type: file #apt|yum|file
-      expires: 1
+      #expires: 1
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache
