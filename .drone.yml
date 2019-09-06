@@ -50,6 +50,7 @@ steps:
         from_secret: ssh_password
       source: hale/build/target/*
       target: hale
+      strip_components: 3
 #      debug: true
       type: file #apt|yum|file
       #expires: 1
